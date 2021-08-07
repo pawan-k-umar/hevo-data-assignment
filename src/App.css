@@ -1,24 +1,28 @@
-.App {
-  text-align: center;
-}
 .slide {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
+
+/*  slide items */
 
 .slide .slide_item {
-  width: 1000px;
-  height: 200px;
+  width: 1200px;
+  height: 500px;
   background: #292929;
   margin: 20px;
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* next and previous button handle */
 .next_prev {
   display: flex;
   justify-content: space-between;
-  width: 1000px;
+  width: 1200px;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -26,8 +30,20 @@
 
 .next_prev button {
   margin: 0px 20px;
+
   border-radius: 50%;
   height: 40px;
   width: 40px;
   cursor: pointer;
+}
+
+/* constrol slides one by one */
+
+.de_active_slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.active_slide {
+  opacity: 1;
 }
