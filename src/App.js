@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useState } from 'react'
 
 function App() {
+  const [name, setName] = useState('')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="slide">
+        {[1].map(() => (
+          <div className="slide_item"></div>
+        ))}
+
+        <div className="next_prev">
+          <button> prev </button>
+          <button> next </button>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
